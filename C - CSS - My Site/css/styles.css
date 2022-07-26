@@ -1,0 +1,192 @@
+/*Positioning.
+  Most positioning is static by default,
+
+  Positioning by relative, means realtive to if it were static.
+  Relative positioning DOES NOT effect other elements.
+  It's as if the original position is kept.
+
+  Absolute positioning positions an element relative to a non-static
+  parent element. Absolute takes the element out of the flow of the doc
+  unlike relative.
+
+  Fixed positioning means that as the document scrolls, a fixed element
+  stays in the same position.
+  */
+
+/*tag Style*/
+
+/*Content goes in the element...
+  Padding increases the size of elements, but not it's functional space.
+  Border goes around the padding, you can style it as solid
+  Margin pushes it away from others.*/
+body{
+  margin: 0;
+  text-align: center;
+  /*Listing in order of preference, depending on client installation*/
+  font-family: "Merriweather", serif;
+  color: #40514E;
+}
+
+
+
+h1{
+  /*Centering with margin, values are Clockwise from top
+    Works only with the text align centre in a container.
+    Allows us to use width 10% while keeping the text centered.
+    If we didn't do this the centring of the text wouldn't work.
+    */
+  margin: 50 auto 0 auto; /*Could also use: 0 auto*/
+  font-family: "Sacramento", serif;
+  /*font-size: 562.5% 100% = 16px
+                      But we want 90px size
+                      90/16 = 562.5%
+
+    Alternativly, can use em, where 1em = 16px
+    The difference is when using %, size is not inherited,
+    but when usign em, size is inherited and added.
+
+    can use rem instead of em to work as if %
+    rem is much easier to debug.
+    */
+    font-size: 5.625rem;
+    color:#66BFBF;
+    /*line-height: 2;
+    Increases the space between what is on top and below the text*/
+}
+
+h2{
+  font-family: "Montserrat", serif;
+  font-size: 2.5rem;
+  color:#66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+h3{
+  font-family: "Montserrat", serif;
+  color:#11999E;
+}
+
+hr{
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #EAF6F6;
+  border-width: 5px;
+  height : 0;
+  width : 5%;
+  margin: 100px auto;
+}
+
+p{
+    line-height: 2;
+}
+
+/*class Style*/
+.top-container{
+  background-color: #E4F9F5;
+  position: relative;
+  padding-top: 100px;
+}
+
+.middle-container{
+  background-color: white;
+  margin: 100px 0;
+}
+
+.bottom-container{
+  background-color: #66BFBF;
+  padding: 50px 0 20px;
+}
+
+.top-cloud{
+  position: absolute;
+  top: 50px;
+  right: 300px;
+}
+
+.bottom-cloud{
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+}
+
+.btn {
+  background: #11CDD4;
+  background-image: -webkit-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -moz-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -ms-linear-gradient(top, #11CDD4, #11999E);
+  background-image: -o-linear-gradient(top, #11CDD4, #11999E);
+  background-image: linear-gradient(to bottom, #11CDD4, #11999E);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: "Montserrat", serif;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+.contact-me{
+  margin: 100px auto;
+  width: 50%;
+}
+
+.contact-message{
+  margin: 40px auto 60px;
+}
+
+.copyright{
+  color: #EAF6F6;
+  font-size: 0.75rem;
+  padding: 20px 0 0 0;
+}
+
+.footer-link{
+  color: #11999E;
+  font-family: "Montserrat", serif;
+  text-decoration: none;
+  margin: 10px 20px;
+  padding: 50px;
+}
+
+a.footer-link:hover{
+  color: #EAF6F6;
+}
+
+.profile{
+  width: 25%;
+  margin: auto;
+}
+
+.skill-img{
+  /*Width here relative to skill row div*/
+  width: 25%;
+  /*Float, the text aligns alongside it on the same line.
+    Don't abuse float for positioning, it's only designed for
+    wrapping text.*/
+  float: left;
+  margin-right: 30px;
+}
+
+.skill-row{
+  margin: 100px auto;
+  width: 50%;
+  text-align: left;
+}
+
+.pro{
+  text-decoration: underline;
+}
+
+
+/*id Style*/
